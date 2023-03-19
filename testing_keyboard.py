@@ -2,11 +2,9 @@ import keyboard
 import random
 import time
 
-def main():
-    # Record events until 'esc' is pressed.
-    recorded = keyboard.record(until='enter')
-# Then replay back at three times the speed.
-    ## keyboard.play(recorded, speed_factor=3)
+
+
+def youtubeTest():
     time.sleep(0.1)
     keyboard.press_and_release('ctrl+l')
     time.sleep(0.1)
@@ -14,6 +12,17 @@ def main():
     time.sleep(0.1)
     keyboard.press_and_release('enter')
 
+
+def addHotkey():
+    keyboard.add_hotkey('c', lambda: keyboard.press_and_release('b', 'a'))
+
+def main():
+    
+    addHotkey()
+    #youtubeTest()
+
+    time.sleep(20)
+    keyboard.remove_all_hotkeys
 main()
 
 
