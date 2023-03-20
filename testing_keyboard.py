@@ -17,9 +17,9 @@ def addHotkey():
     keyboard.add_hotkey('c', lambda: keyboard.press_and_release('b', 'a'))
 
 def main():
-    
-    addHotkey()
-    #youtubeTest()
+    keyboard.wa
+    #addHotkey()
+    youtubeTest()
 
     time.sleep(20)
     keyboard.remove_all_hotkeys

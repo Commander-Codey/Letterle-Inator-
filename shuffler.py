@@ -17,6 +17,8 @@ def on_press(event):
         keyboard.press_and_release(replacements[event.name])
         return False
     
+def main():
+    keyboard.on_press(on_press)
+    keyboard.wait()
 
-keyboard.on_press(on_press)
-keyboard.wait()
+main()
