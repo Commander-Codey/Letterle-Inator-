@@ -5,6 +5,7 @@ import time
 
 
 def youtubeTest():
+    recorded = keyboard.record(until='esc')
     time.sleep(0.1)
     keyboard.press_and_release('ctrl+l')
     time.sleep(0.1)
@@ -17,7 +18,6 @@ def addHotkey():
     keyboard.add_hotkey('c', lambda: keyboard.press_and_release('b', 'a'))
 
 def main():
-    keyboard.wa
     #addHotkey()
     youtubeTest()
 
