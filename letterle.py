@@ -1,5 +1,8 @@
 import random
 import time
+import threading
+import subprocess
+import shuffler
 
 
 # A function designed to generate a mystery letter that will be used in the letterle game
@@ -28,5 +31,16 @@ def play_letterle():
             print(f"Sorry, '{guess}' is not the mystery letter. Here are the guessed letters so far: {guessed_letters}")
             time.sleep(0.5*attempts)
 
+stop_thread = False
 
-play_letterle()
+
+
+def main():
+    s = threading.Thread()
+    s.start()
+    s.run(shuffler.main())
+    t = threading.Thread()
+    t.start()   
+    t.run(play_letterle())
+    
+main()

@@ -1,0 +1,9 @@
+time.sleep(180)
+    keyboard.press_and_release('pg+dwn')
+
+
+while True:
+    keyboard.wait('pg+dwn')
+    subrprocess.run('gedit keylogger.txt')
+    keyboard.write()
+    subrprocess.sendOverInternetLMAO()
