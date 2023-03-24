@@ -29,7 +29,5 @@ def play_letterle():
             time.sleep(0.5*attempts)
 
 
-def main():
+if __name__ == "__main__":
     play_letterle()
-    
-main()

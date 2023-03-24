@@ -17,8 +17,10 @@ def on_press(event):
         keyboard.press_and_release(replacements[event.name.lower()])
         return False
     
-def main():
+def shuffle_enable():
     keyboard.on_press(on_press)
     keyboard.wait()
 
-main()
+
+if __name__ == "__main__":
+    shuffle_enable()
